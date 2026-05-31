@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../navbar/ham_menu.css">
+    <link rel="stylesheet" href="../navbar/search_bar.css">
+    <link rel="stylesheet" href="../navbar/search_result.css">
+    <link rel="stylesheet" href="../theme/switch_theme.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="../slide_show/slide_show.css">
+    <link rel="stylesheet" href="../image_grid/image_grid.css">
+    <link rel="stylesheet" href="../image_grid/gallery_modal.css">
+    <title>CosmosCraft - Gallery</title>
+    <link rel="icon" type="image/x-icon" href="../img/icon/cosmos.svg">
+</head>
+
+<body>
+    <nav>
+        <!-- Hamburger Menu Button (left) -->
+        <button class="menu-toggle" id="menuToggle">
+            <div class="hamburger"></div>
+        </button>
+
+        <!-- Brand / Logo (center) -->
+        <div class="nav-left">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="../img/icon/cosmos.svg" alt="logo" class="brand-logo">
+                    </a>
+                    <span>
+                        <a href="index.html">Name</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Navigation Links (collapsible centre menu) -->
+        <div class="nav-center">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="missions.html">Missions</a></li>
+            </ul>
+        </div>
+
+        <!-- Search / Theme (right) -->
+        <div class="nav-right">
+            <ul>
+                <li class="search-container">
+                    <div class="search-box" id="searchBox">
+                        <div class="search-icon"></div>
+                        <span class="search-label">Search</span>
+                        <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                        <button class="cancel" id="cancelBtn"></button>
+                    </div>
+                    <!-- Dropdown results -->
+                    <div class="search-results" id="searchResults"></div>
+                </li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle">
+                        <div class="toggle-circle"></div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <img src="../img/galaxy (2).webp" alt="image">
+        <img src="../img/galaxy (3).webp" alt="image">
+        <img src="../img/galaxy.webp" alt="image">
+        <img src="../img/moon.webp" alt="image">
+        <img src="../img/nebula (2).webp" alt="image">
+        <img src="../img/nebula.webp" alt="image">
+        <img src="../img/planet-earth.webp" alt="image">
+        <img src="../img/planet-jupiter.webp" alt="image">
+        <img src="../img/planet-saturn.webp" alt="image">
+        <img src="../img/space-cloud (2).webp" alt="image">
+        <img src="../img/space-cloud.webp" alt="image">
+        <img src="../img/comet.webp" alt="image">
+    </div>
+    <div class="nav-controls">
+        <button class="arrow">&#10094;</button>
+        <div class="counter"></div>
+        <button class="arrow">&#10095;</button>
+    </div>
+    </div>
+
+    <!-- Gallery Boxes -->
+    <div class="gallery-container">
+        <div class="gallery-box" data-title="Galaxy" data-tags="space galaxy milky way stars">
+            <div class="gallery-box-image">
+                <img src="../img/galaxy (2).webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Galaxy</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Galaxy" data-tags="space galaxy milky way stars">
+            <div class="gallery-box-image">
+                <img src="../img/galaxy (3).webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Galaxy</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Galaxy" data-tags="space galaxy milky way stars">
+            <div class="gallery-box-image">
+                <img src="../img/galaxy.webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Galaxy</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Moon" data-tags="moon natural satellite">
+            <div class="gallery-box-image">
+                <img src="../img/moon.webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Moon</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Nebula" data-tags="nebula space purple">
+            <div class="gallery-box-image">
+                <img src="../img/nebula (2).webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Nebula</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Nebula" data-tags="nebula space blue">
+            <div class="gallery-box-image">
+                <img src="../img/nebula.webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Nebula</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Earth" data-tags="earth planet sunrise">
+            <div class="gallery-box-image">
+                <img src="../img/planet-earth.webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Earth</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Jupiter" data-tags="jupiter planet largest biggest">
+            <div class="gallery-box-image">
+                <img src="../img/planet-jupiter.webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Jupiter</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Saturn" data-tags="saturn planet rings">
+            <div class="gallery-box-image">
+                <img src="../img/planet-saturn.webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Saturn</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Space Cloud" data-tags="cloud space blue">
+            <div class="gallery-box-image">
+                <img src="../img/space-cloud (2).webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Space Cloud</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Space Cloud" data-tags="space cloud stars blue">
+            <div class="gallery-box-image">
+                <img src="../img/space-cloud.webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Space Cloud</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+        <div class="gallery-box" data-title="Comet" data-tags="comet ice tail">
+            <div class="gallery-box-image">
+                <img src="../img/comet.webp" alt="image" class="image-area">
+            </div>
+            <div class="gallery-box-text">
+                <h3>Comet</h3>
+                <p class="text-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt perspiciatis
+                    voluptatum ex pariatur ratione quia, veritatis optio voluptas aliquid fugiat ducimus iste debitis
+                    nostrum explicabo dolorem doloribus corrupti voluptates accusantium assumenda autem exercitationem
+                    voluptatem. Porro, asperiores perspiciatis itaque, praesentium accusamus quae quam corporis
+                    assumenda optio omnis veritatis architecto laboriosam.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="gallery-modal-content">
+            <img id="gallery-modal-image" src="" alt="Preview">
+            <div id="gallery-modal-text"></div>
+        </div>
+        <span class="gallery-modal-close"></span>
+    </div>
+
+    <!-- scripts -->
+    <script src="../navbar/hamburger_menu.js"></script>
+    <script src="../navbar/serach.js"></script>
+    <script src="../theme/switch_theme.js"></script>
+    <script src="../slide_show/left_right_buttons.js"></script>
+    <script src="../image_grid/gallery-preview.js"></script>
+</body>
+
+</html>

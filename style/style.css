@@ -1,0 +1,49 @@
+:root {
+    --main-heading-font: Verdana, Geneva, Tahoma, sans-serif;
+    --main-body-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --close-icon: "\2716";
+
+    --page-bg: rgb(255, 255, 255);
+    --primary-text-color: rgb(18, 18, 18);
+    --secondary-text-color: rgb(68, 68, 68);
+    --border-color: rgb(176, 176, 176);
+    --hover-color: rgb(160, 160, 160);
+    --button-color: rgb(136, 136, 136);
+    --overlay-color: rgba(250, 250, 250, 0.99);
+    --overlay-secondary-color: rgba(245, 245, 245, 0.99);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--page-bg);
+    color: var(--primary-text-color);
+}
+
+body.dark-theme {
+    --page-bg: rgb(18, 18, 18);
+    --primary-text-color: rgb(224, 224, 224);
+    --secondary-text-color: rgb(176, 176, 176);
+    --border-color: rgb(68, 68, 68);
+    --overlay-color: rgb(23, 23, 23, 0.99);
+    --overlay-secondary-color: rgb(28, 28, 28, 0.99);
+}
+
+.background {
+    background-color: var(--page-bg);
+}
+
+.icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+.text_link {
+    display: inline-block;
+    font-family: var(--main-body-font);
+    font-size: small;
+    font-style: italic;
+}

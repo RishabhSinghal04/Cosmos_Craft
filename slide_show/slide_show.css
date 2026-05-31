@@ -1,0 +1,59 @@
+/* Slideshow itself */
+.slideshow-container {
+    display: flex;
+    max-width: 100vw;
+    height: 70vh;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slideshow-container img {
+    flex: 0 0 100%;
+    max-width: 100vw;
+    height: auto;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+/* Hide scrollbar */
+.slideshow-container::-webkit-scrollbar {
+    display: none;
+}
+
+.slideshow-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Navigation controls BELOW slideshow */
+.nav-controls {
+    display: flex;
+    justify-content: center;
+    /* center everything */
+    align-items: center;
+    gap: 1rem;
+    /* spacing between arrow and dots */
+    margin-top: 1.2rem;
+    /* space below slideshow */
+}
+
+/* Arrow buttons (inline, not absolute anymore) */
+.arrow {
+    background: var(--primary-text-color);
+    color: var(--page-bg);
+    border: 2px solid var(--border-color);
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 50%;
+}
+
+.arrow:hover{
+    background-color: var(--hover-color);
+}
+
+.counter {
+    font-size: 1rem;
+    color: var(--page-text);
+}

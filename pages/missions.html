@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../navbar/ham_menu.css">
+    <link rel="stylesheet" href="../navbar/search_bar.css">
+    <link rel="stylesheet" href="../navbar/search_result.css">
+    <link rel="stylesheet" href="../theme/switch_theme.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="../timeline/mission_timeline.css">
+    <title>CosmosCraft - Missions</title>
+    <link rel="icon" type="image/x-icon" href="../img/icon/cosmos.svg">
+</head>
+
+<body>
+    <nav>
+        <!-- Hamburger Menu Button (left) -->
+        <button class="menu-toggle" id="menuToggle">
+            <div class="hamburger"></div>
+        </button>
+
+        <!-- Brand / Logo (center) -->
+        <div class="nav-left">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="../img/icon/cosmos.svg" alt="logo" class="brand-logo">
+                    </a>
+                    <span>
+                        <a href="index.html">Name</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Navigation Links (collapsible centre menu) -->
+        <div class="nav-center">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="missions.html">Missions</a></li>
+            </ul>
+        </div>
+
+        <!-- Search / Theme (right) -->
+        <div class="nav-right">
+            <ul>
+                <li class="search-container">
+                    <div class="search-box" id="searchBox">
+                        <div class="search-icon"></div>
+                        <span class="search-label">Search</span>
+                        <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                        <button class="cancel" id="cancelBtn"></button>
+                    </div>
+                    <!-- Dropdown results -->
+                    <div class="search-results" id="searchResults"></div>
+                </li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle">
+                        <div class="toggle-circle"></div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="bg-image"></div>
+    <div class="timeline">
+        <div class="timeline-header">
+            <h1>Space Missions Timeline</h1>
+        </div>
+        <div class="event" data-title="Sputnik 1" data-tags="sputnik first satellite 1957">
+            <h3>Sputnik 1 (1957)</h3>
+            <p>The USSR launched the first artificial satellite, marking the start of the Space Race.</p>
+        </div>
+
+        <div class="event" data-title="Yuri Gagarin" data-tags="yuri gagarin first human in space 1961">
+            <h3>Yuri Gagarin (1961)</h3>
+            <p>Gagarin became the first human to orbit Earth aboard Vostok 1.</p>
+        </div>
+
+        <div class="event" data-title="Apollo 11" data-tags="apollo 11 moon landing 1969">
+            <h3>Apollo 11 (1969)</h3>
+            <p>Neil Armstrong and Buzz Aldrin walked on the Moon, a defining moment in human history.</p>
+        </div>
+
+        <div class="event" data-title="Salyut 1" data-tags="salyut 1 first space station 1971">
+            <h3>Salyut 1 (1971)</h3>
+            <p>The USSR launched the world's first space station.</p>
+        </div>
+
+        <div class="event" data-title="Viking 1" data-tags="viking 1 mars lander 1976">
+            <h3>Viking 1 (1976)</h3>
+            <p>NASA's Viking 1 became the first successful Mars lander.</p>
+        </div>
+
+        <div class="event" data-title="Space Shuttle Columbia" data-tags="space shuttle columbia sts-1 1981">
+            <h3>Space Shuttle Columbia (1981)</h3>
+            <p>The first reusable spacecraft launched, beginning the Shuttle era.</p>
+        </div>
+
+        <div class="event" data-title="Hubble Telescope" data-tags="hubble space telescope 1990">
+            <h3>Hubble Telescope (1990)</h3>
+            <p>Launched into orbit, Hubble revolutionized astronomy with deep-space images.</p>
+        </div>
+
+        <div class="event" data-title="International Space Station"
+            data-tags="iss international space station 1998 2000">
+            <h3>International Space Station (1998-2000)</h3>
+            <p>The first ISS module launched in 1998; continuously inhabited since 2000.</p>
+        </div>
+
+        <div class="event" data-title="Curiosity Rover" data-tags="curiosity rover mars landing 2012">
+            <h3>Curiosity Rover (2012)</h3>
+            <p>NASA's rover landed on Mars and continues to explore the Martian surface.</p>
+        </div>
+
+    </div>
+
+    <!-- scripts -->
+    <script src="../navbar/hamburger_menu.js"></script>
+    <script src="../navbar/serach.js"></script>
+    <script src="../theme/switch_theme.js"></script>
+</body>
+
+</html>

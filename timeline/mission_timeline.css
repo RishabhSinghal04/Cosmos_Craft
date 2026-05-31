@@ -1,0 +1,130 @@
+:root {
+  --margin: 1rem;
+  --padding: 1rem;
+  --line: 0.8rem;
+  /* line thickness */
+  --dot: 1rem;
+  /* dot diameter */
+  --offset: 0.5rem;
+  /* extra gap between dot and event box */
+  --border-width: 0.1rem;
+  --h1-font-size: clamp(1.5rem, 3vw, 2.5rem)
+}
+
+.bg-image {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  /* stop tiling */
+  background-size: cover;
+  filter: blur(2px);
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+  padding: 0;
+}
+
+.timeline-header {
+  position: relative;
+  z-index: 1;
+  background-color: var(--overlay-color);
+  filter: invert(5%);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: var(--border-width) solid var(--primary-text-color);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.timeline h1 {
+  text-align: center;
+  margin: 0;
+  font-size: var(--h1-font-size);
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(var(--padding) + var(--border-width) + var(--h1-font-size));
+  bottom: calc(2 * var(--padding));
+  width: var(--line);
+  background-color: var(--overlay-secondary-color);
+  filter: invert(10%);
+  transform: translateX(-50%);
+  border-radius: 0.3rem;
+}
+
+.event {
+  margin: var(--margin);
+  width: calc(50% - var(--padding) - var(--line) - var(--border-width) - var(--dot) - var(--offset) - var(--margin));
+  padding: var(--padding);
+  background: var(--overlay-secondary-color);
+  border-radius: 0.5rem;
+  position: relative;
+  border: var(--border-width) solid var(--primary-text-color);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.event h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: var(--dot);
+  height: var(--dot);
+  background: var(--primary-text-color);
+  border-radius: 50%;
+}
+
+.event:nth-child(odd) {
+  left: calc(var(--line) - var(--offset));
+  /* left: 0; */
+}
+
+.event:nth-child(odd)::before {
+  right: -1.5rem;
+}
+
+.event:nth-child(even) {
+  left: calc(50% - var(--border-width));
+}
+
+.event:nth-child(even)::before {
+  left: -1.5rem;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .event {
+    margin: 2rem var(--margin);
+    text-align: center;
+    width: calc(100% - var(--padding) - var(--border-width) - var(--margin));
+    /* width: 90%; */
+    left: 0 !important;
+    padding: 0;
+  }
+
+  .event::before,
+  .event:nth-child(odd)::before,
+  .event:nth-child(even)::before {
+    top: 0;
+    left: 50%;
+    right: auto;
+    /* ← cancels the odd rule's right: -1.5rem */
+    transform: translateX(-50%) translateY(-50%);
+  }
+}

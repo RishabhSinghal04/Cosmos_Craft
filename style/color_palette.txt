@@ -1,0 +1,33 @@
+1. Monochromatic Minimalism:-
+A simple monochromatic palette can give your dark mode website a clean, elegant, and professional look. 
+By using varying shades of gray and black, you maintain a minimalist aesthetic while still providing depth and contrast. 
+The key here is balance—light grays for text and secondary elements, dark grays for backgrounds, and black for emphasis.
+
+#121212; #E0E0E0; #B0B0B0; #444444; #888888
+
+Palette:
+Background: #121212 (charcoal black)
+Primary Text: #E0E0E0 (light gray)
+Secondary Text: #B0B0B0 (medium gray)
+Borders/Dividers: #444444 (dark gray)
+Accent: #888888 (soft gray)
+
+Perfect for: Tech blogs, portfolio sites, and professional landing pages.
+Why it works: The minimal use of color directs the focus to the content and improves readability without distracting the user.
+
+
+Dark Theme:
+Background        #121212   rgb(18, 18, 18)
+Primary Text      #E0E0E0   rgb(224, 224, 224)
+Secondary Text    #B0B0B0   rgb(176, 176, 176)
+Borders/Dividers  #444444   rgb(68, 68, 68)
+Accent            #888888   rgb(136, 136, 136)
+Hover	          #A0A0A0   rgb(160, 160, 160)	
+
+Light Theme:
+Background        #FFFFFF   rgb(255, 255, 255)
+Primary Text      #121212   rgb(18, 18, 18)
+Secondary Text    #444444   rgb(68, 68, 68)
+Borders/Dividers  #B0B0B0   rgb(176, 176, 176)
+Accent            #888888   rgb(136, 136, 136)
+Hover             #666666   rgb(102, 102, 102)

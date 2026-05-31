@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Design of a static website about Space for hands-on web development practice.">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../navbar/ham_menu.css">
+    <link rel="stylesheet" href="../navbar/search_bar.css">
+    <link rel="stylesheet" href="../navbar/search_result.css">
+    <link rel="stylesheet" href="../theme/switch_theme.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="../home/home.css">
+    <title>CosmosCraft - Home</title>
+    <link rel="icon" type="image/x-icon" href="../img/icon/cosmos.svg">
+</head>
+
+<body>
+    <nav>
+        <!-- Hamburger Menu Button (left) -->
+        <button class="menu-toggle" id="menuToggle">
+            <div class="hamburger"></div>
+        </button>
+
+        <!-- Brand / Logo (center) -->
+        <div class="nav-left">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="../img/icon/cosmos.svg" alt="logo" class="brand-logo">
+                    </a>
+                    <span>
+                        <a href="index.html">Name</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Navigation Links (collapsible centre menu) -->
+        <div class="nav-center">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="missions.html">Missions</a></li>
+            </ul>
+        </div>
+
+        <!-- Search / Theme (right) -->
+        <div class="nav-right">
+            <ul>
+                <li class="search-container">
+                    <div class="search-box" id="searchBox">
+                        <div class="search-icon"></div>
+                        <span class="search-label">Search</span>
+                        <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                        <button class="cancel" id="cancelBtn"></button>
+                    </div>
+                    <!-- Dropdown results -->
+                    <div class="search-results" id="searchResults"></div>
+                </li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle">
+                        <div class="toggle-circle"></div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="main-heading">
+        <h2>Journey Through Space</h2>
+        <p>Discover breathtaking images and relive humanity's greatest space milestones.</p>
+    </section>
+
+    <!-- Highlights -->
+    <section class="highlights">
+        <div class="highlight">
+            <h3>Gallery</h3>
+            <p>Planets, galaxies, and spacecraft in stunning detail.</p>
+        </div>
+        <div class="highlight">
+            <h3>Timeline</h3>
+            <p>From Galileo's telescope to Mars rovers - relive history.</p>
+        </div>
+    </section>
+    <section class="content">
+        <h3>About This Site</h3>
+        <p>
+            Space Journey is a simple static website created to celebrate the beauty and history of space exploration.
+            The Gallery showcases stunning visuals of planets, galaxies, and spacecraft, while the Missions section
+            highlights key milestones in astronomy and human spaceflight.
+        </p>
+        <p>
+            Whether you're here to admire the universe's wonders or to learn about historic missions,
+            this site is your gateway to the stars.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>“Somewhere, something incredible is waiting to be known.” - Carl Sagan</p>
+    </footer>
+
+    <!-- scripts -->
+    <script src="../navbar/hamburger_menu.js"></script>
+    <script src="../navbar/serach.js"></script>
+    <script src="../theme/switch_theme.js"></script>
+</body>
+
+</html>

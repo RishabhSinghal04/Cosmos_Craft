@@ -1,0 +1,97 @@
+.gallery-container {
+  margin: 1rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  max-width: 100%;
+  padding: clamp(0.5rem, 1vw, 1rem);
+  justify-content: center;
+}
+
+.gallery-box {
+  margin: 1rem;
+  background: var(--overlay-secondary-color);
+  overflow: hidden;
+  /* Prevents image overflow */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+}
+
+/* Image Container - Fixed aspect ratio */
+.gallery-box-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: brown;
+}
+
+.gallery-box-image img {
+  width: 100%;
+  height: 100%;
+  /* Fill the container */
+  object-fit: cover;
+  /* Crop to fill, maintains aspect ratio */
+  display: block;
+}
+
+/* Text Content */
+.gallery-box-text {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.gallery-box-text h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.gallery-box-text p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* WebKit-specific */
+  line-clamp: 2;
+  /* Standard property */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0.5rem 0 0 0;
+  font-size: 0.875rem;
+  color: var(--secondary-text-color);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* Tablet */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  }
+
+  .gallery-box-text h3 {
+    font-size: 0.9rem;
+  }
+
+  .gallery-box-text p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+
+  .gallery-box-text h3 {
+    font-size: 0.85rem;
+  }
+}
+
+/* Very Small Mobile - Single Column */
+@media (max-width: 400px) {
+  .gallery-container {
+    grid-template-columns: auto;
+  }
+}

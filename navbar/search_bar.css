@@ -1,0 +1,164 @@
+/* Container for positioning context */
+.search-container {
+  position: relative;
+  /* This creates positioning context */
+  display: inline-block;
+  /* Maintains space even when search-box is absolute */
+  min-width: fit-content;
+  /* Reserves minimum space */
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nav-bg);
+  border-radius: 9999px;
+  padding: 2px 8px;
+  border: 1px solid var(--primary-text-color);
+  cursor: pointer;
+  gap: 0.4rem;
+  width: fit-content;
+  margin: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Smoother easing */
+  position: relative;
+  /* Always positioned, just changes to absolute */
+}
+
+/* Expanded state - floats over navbar, expands LEFT */
+.search-box.expanded {
+  position: absolute;
+  right: 0;
+  /* Anchor to right edge, expands leftward */
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: right left;
+  width: var(--dynamic-width);
+  /* Fixed width when expanded */
+  z-index: 12;
+  /* Above other elements */
+  background-color: var(--nav-bg);
+  /* Match navbar background */
+}
+
+.search-label {
+  font-size: var(--nav-font-size);
+  color: var(--primary-text-color);
+  transition: opacity 0.25s ease, width 0.25s ease;
+  /* Faster transition */
+  white-space: nowrap;
+}
+
+.search-icon {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--primary-text-color);
+  -webkit-mask: url("../img/icon/search-solid.svg") no-repeat center;
+  mask: url("../img/icon/search-solid.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.search-box.expanded .search-label {
+  opacity: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--nav-font-size);
+  color: var(--primary-text-color);
+  width: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s, width 0.3s ease;
+}
+
+.search-box.expanded input {
+  width: 100%;
+  /* Fill available space */
+  flex: 1;
+  /* Take remaining space */
+  opacity: 1;
+}
+
+.search-box .cancel {
+  border: none;
+  background: transparent;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  display: none;
+  flex-shrink: 0;
+  /* Don't shrink */
+  font-size: 1rem;
+}
+
+.search-box.expanded .cancel {
+  display: inline-flex;
+  align-items: center;
+}
+
+.cancel::before {
+  content: var(--close-icon);
+  color: var(--primary-text-color);
+  font-size: 1rem;
+}
+
+
+/* Ensure icons don't shrink */
+.search-box {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== HIDE CENTER ELEMENTS WHEN SEARCH IS ACTIVE ===== */
+
+/* Desktop (>768px): Hide nav-center (navigation links) */
+@media (min-width: 769px) {
+
+  .search-box.expanded~* .nav-center,
+  nav:has(.search-box.expanded) .nav-center {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+}
+
+/* Mobile/Tablet (≤768px): Hide nav-left (brand/logo) */
+@media (max-width: 768px) {
+  nav:has(.search-box.expanded) .nav-left {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  /* Keep hamburger menu visible */
+  nav:has(.search-box.expanded) .menu-toggle {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+nav:has(.search-box.expanded)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--nav-bg);
+  opacity: 0.95;
+  z-index: 11;
+  pointer-events: none;
+}
+
+nav:has(.search-box.expanded) .search-box {
+  z-index: 12;
+}

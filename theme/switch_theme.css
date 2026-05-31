@@ -1,0 +1,39 @@
+
+.theme-toggle {
+    width: clamp(24px, 5vh, 60px);
+    height: clamp(12px, 2.5vh, 30px);
+    background-color: var(--primary-text-color);
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-circle {
+    width: calc(50% - 4px);
+    /* Knob is half width minus padding */
+    height: calc(100% - 4px);
+    /* Slightly smaller than track */
+    background-color: var(--page-bg);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    /* Center vertically */
+    left: 2px;
+    /* Start position */
+    transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-theme .toggle-circle {
+    left: calc(50% + 2px);
+}
+
+.theme-toggle:hover{
+    background-color: var(--primary-text-color);
+}

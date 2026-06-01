@@ -128,9 +128,8 @@ nav li a {
         display: none;
         order: 4;
         width: 100%;
-        margin-top: 0.5rem;
+        margin-top: 0.2rem;
         background-color: var(--page-bg);
-        padding: 1rem 0;
     }
 
     .nav-center.active {
@@ -140,14 +139,19 @@ nav li a {
     .nav-center ul {
         flex-direction: column;
         width: 100%;
-        gap: 0.5rem;
+        padding: 0;
+        align-items: flex-start;
     }
 
     .nav-center li {
         width: 100%;
-        text-align: center;
+        text-align: left;
         font-size: 1rem;
-        padding: 0.75rem;
+    }
+
+    .nav-center li a{
+        width: 100%;
+        text-align: left;
     }
 
     .nav-center li:hover {
@@ -155,7 +159,7 @@ nav li a {
     }
 
     /* Icons only on right */
-    .nav-right ul > li > span {
+    .nav-right ul > li > div > span {
         display: none;
     }
 }
@@ -169,7 +173,6 @@ nav li a {
 
     .nav-center li {
         font-size: 0.95rem;
-        padding: 0.7rem;
     }
 
     .nav-right li img {
@@ -185,6 +188,5 @@ nav li a {
 @media (max-width: 400px) {
     .nav-center li {
         font-size: 0.85rem;
-        padding: 0.6rem;
     }
 }

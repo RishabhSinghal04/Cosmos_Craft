@@ -1,4 +1,6 @@
 :root {
+    color-scheme: light dark;
+
     --main-heading-font: Verdana, Geneva, Tahoma, sans-serif;
     --main-body-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --close-icon: "\2716";

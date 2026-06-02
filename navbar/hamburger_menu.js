@@ -2,8 +2,8 @@
 
 /**
  * Toggle navigation menu open/close and handle outside clicks.
- * @param {Element | null} toggle 
- * @param {Element | null} navCenter 
+ * @param {HTMLElement | null} toggle 
+ * @param {HTMLElement | null} navCenter 
  */
 function menuToggle(toggle, navCenter) {
     if (!toggle || !navCenter) {
@@ -36,6 +36,23 @@ function menuToggle(toggle, navCenter) {
     });
 }
 
+/**
+ * @param {HTMLElement | null} nav
+ * @param {HTMLElement | null} navCenter
+ */
+function updateNavHeight(nav, navCenter) {
+    if (!nav || !navCenter) { return; }
+    const height = nav.offsetHeight + "px";
+    navCenter.style.top = height;
+}
+
+/**@type {HTMLElement | null} */
+const nav = document.querySelector("nav");
+/**@type {HTMLElement | null} */
 const toggle = document.querySelector('.menu-toggle');
+/**@type {HTMLElement | null} */
 const navCenter = document.querySelector('.nav-center');
 menuToggle(toggle, navCenter);
+
+window.addEventListener("resize", () => updateNavHeight(nav, navCenter));
+updateNavHeight(nav, navCenter);

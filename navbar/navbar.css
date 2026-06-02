@@ -99,9 +99,10 @@ nav li a {
 
     nav {
         flex-wrap: wrap;
+        position: sticky;
     }
 
-    /* Hamburger on left */
+    /* Hamburger Menu on left */
     .menu-toggle {
         display: block;
         order: 1;
@@ -116,7 +117,7 @@ nav li a {
         justify-content: center;
     }
 
-    /* Sign-in/theme icons on right */
+    /* Search/theme icons on right */
     .nav-right {
         order: 3;
         display: flex;
@@ -127,8 +128,11 @@ nav li a {
     .nav-center {
         display: none;
         order: 4;
-        width: 100%;
-        margin-top: 0.2rem;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        background-color: var(--page-bg);
         background-color: var(--page-bg);
     }
 
@@ -147,11 +151,13 @@ nav li a {
         width: 100%;
         text-align: left;
         font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
 
-    .nav-center li a{
+    .nav-center li a {
         width: 100%;
         text-align: left;
+        display: block;
     }
 
     .nav-center li:hover {
@@ -159,7 +165,7 @@ nav li a {
     }
 
     /* Icons only on right */
-    .nav-right ul > li > div > span {
+    .nav-right ul>li>div>span {
         display: none;
     }
 }
